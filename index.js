@@ -1,3 +1,9 @@
+var player1 = prompt("enter name of first player:");
+var player2 = prompt("enter name of second player:");
+
+document.querySelectorAll(".dice p")[0].textContent = player1;
+document.querySelectorAll(".dice p")[1].textContent = player2;
+
 var rand1 = Math.floor(Math.random()*6) + 1;
 var rand2 = Math.floor(Math.random()*6) + 1;
 
@@ -10,7 +16,7 @@ document.querySelector(".img2").setAttribute("src",path2);
 if(rand1 == rand2) {
   document.querySelector("h1").textContent = "IT'S DRAW!";
 } else if(rand1 > rand2) {
-  document.querySelector("h1").textContent = "😎PLAYER 1 WINS!";
+  document.querySelector("h1").textContent = "😎"+player1+" WINS!";
 } else {
-  document.querySelector("h1").textContent = "PLAYER 2 WINS!😎";
+  document.querySelector("h1").textContent = player2x+" WINS!😎";
 }
